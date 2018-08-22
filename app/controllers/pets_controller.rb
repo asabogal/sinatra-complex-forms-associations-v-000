@@ -18,6 +18,7 @@ class PetsController < ApplicationController
       @pet.owner << Owner.create(name: params[:owner][:name])
     end
     @pet.save
+    binding.pry
     redirect to "pets/#{@pet.id}"
   end
 
